@@ -1,6 +1,6 @@
 videos/
 results/
 node_modules/
-merge-report.json/
+merge-report.json
 mochawesome-report/
 .vscode/
