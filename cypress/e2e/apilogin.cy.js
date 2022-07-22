@@ -1,7 +1,7 @@
 describe('ezOneUiTest',function(){
     it('apilogin ',function(){
         cy.request({
-            url:'http://test321.ezone-test.work/v1/ezbase/iam/authenticate/login',
+            url:'./v1/ezbase/iam/authenticate/login',
             method:'POST',
             // form:true,  // indicates the body should be form urlencoded and sets Content-Type: application/x-www-form-urlencoded headers
             headers: {

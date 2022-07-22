@@ -1,4 +1,3 @@
-
 describe('ezOneUiTest', () => {
 
     beforeEach( function() {
@@ -6,7 +5,7 @@ describe('ezOneUiTest', () => {
     })
    
     it('create proejctspace', () => {
-        cy.visit('http://test321.ezone-test.work/ezProject')
+        cy.visit('/ezProject')
         // cy.contains('我的工作台').click()
         cy.contains('项目管理').click()
         cy.contains('新 建').click()
