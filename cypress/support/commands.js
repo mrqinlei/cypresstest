@@ -27,7 +27,7 @@
  Cypress.Commands.add('apilogin', (credential="amlhbmRhbmxpYW5nZGlhbjEyMzQ1Ng",
  identifier="afei") => {
     cy.request({
-    url:'http://test321.ezone-test.work/v1/ezbase/iam/authenticate/login',
+    url:'v1/ezbase/iam/authenticate/login',
     method:'POST',
     headers: {
     "Content-Type": "application/json"

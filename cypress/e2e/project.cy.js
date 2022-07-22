@@ -1,10 +1,10 @@
 
 describe('ezOneUiTest', () => {
 
-    before( function() {
+    beforeEach( function() {
         cy.apilogin()
     })
-
+   
     it('create proejctspace', () => {
         cy.visit('http://test321.ezone-test.work/ezProject')
         // cy.contains('我的工作台').click()
@@ -17,6 +17,19 @@ describe('ezOneUiTest', () => {
         cy.contains("软件研发").click()
         cy.contains('确 定').click()
         cy.xpath('/html[1]/body[1]/div[3]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/span[1]').should('contain',"uiautocreateproject")
+    })
+    
+    it('create new plan',()=> {
+        cy.contains('计划与看板').click()
+        cy.contains('新建计划').click()
+        cy.get('[placeholder="开始日期"]').click().type("2022-07-22").type('{enter}')
+        cy.get('[placeholder="结束日期"]').click().type("2022-07-23").type('{enter}')
+        cy.get('[placeholder="请输入名称"]').type("uiautocreateplan")
+        cy.contains("确 定").click()
+        cy.contains("计划创建成功").should('contain','计划创建成功')
+    })
+    
+    it('delete projectspace',()=>{
         cy.contains('项目管理').click()
         cy.contains('设置').click()
         cy.contains('运维操作').click()
