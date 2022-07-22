@@ -28,9 +28,19 @@ describe('ezOneUiTest', () => {
         cy.contains("确 定").click()
         cy.contains("计划创建成功").should('contain','计划创建成功')
     })
+
+    it('create new card',()=>{
+        cy.contains("新建卡片").click()
+        cy.get('[placeholder="请输入标题"]').type("uiautocreatebugcard")
+        cy.contains("Story").click()
+        cy.contains("Bug").click()
+        cy.get(".ProseMirror").type("输入内容")
+        cy.contains("空值选填字段").click()
+        cy.contains("确 定").click()
+        cy.contains("创建成功").should('contain',"创建成功")
+    })
     
     it('delete projectspace',()=>{
-        cy.contains('项目管理').click()
         cy.contains('设置').click()
         cy.contains('运维操作').click()
         cy.get('button.ant-btn.ant-btn-danger').click()
