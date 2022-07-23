@@ -19,6 +19,7 @@ describe('ezOneUiTest', () => {
         cy.get('[placeholder="请输入文章标题"]').type("uiautocreatewikipage")
         cy.get(".ProseMirror").type("输入内容输入内容输入内容输入内容输入内容")
         cy.contains("发 布").click()
+        cy.contains('发布成功').should('contain','发布成功')
     })
     it('delete wikispace',()=>{
         cy.contains('设置').click()
