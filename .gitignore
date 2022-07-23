@@ -4,3 +4,4 @@ node_modules/
 merge-report.json
 mochawesome-report/
 .vscode/
+screenshots/
