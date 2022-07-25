@@ -35,15 +35,15 @@
     <distributionManagement>
         <repository>
             <!--必须与 settings.xml 的 id 一致-->
-            <id>ezone_release_maven_maven</id>
-            <name>ezone_release_maven_maven</name>
-            <url>https://easyzone.work/pkg/ezone/maven/maven/release/</url>
+            <id>test321_release_maven_maven</id>
+            <name>test321_release_maven_maven</name>
+            <url>http://ezone-test.work/pkg/test321/maven/maven/release/</url>
         </repository>
         <snapshotRepository>
             <!--必须与 settings.xml 的 id 一致-->
-            <id>ezone_snapshot_maven_maven</id>
-            <name>ezone_snapshot_maven_maven</name>
-            <url>https://easyzone.work/pkg/ezone/maven/maven/snapshot/</url>
+            <id>test321_snapshot_maven_maven</id>
+            <name>test321_snapshot_maven_maven</name>
+            <url>http://ezone-test.work/pkg/test321/maven/maven/snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
