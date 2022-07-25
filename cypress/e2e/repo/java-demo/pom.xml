@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.rain</groupId>
+    <artifactId>raintest01.ab</artifactId>
+    <version>1.0.3-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.spring</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10.5</version>
+        </dependency>
+    </dependencies>
+    <!--    <repositories>-->
+    <!--        <repository>-->
+    <!--            <id>ezpkg_local</id>-->
+    <!--            <url>http://192.168.3.60:8388</url>-->
+    <!--            <snapshots>-->
+    <!--                <enabled>true</enabled>-->
+    <!--            </snapshots>-->
+    <!--        </repository>-->
+    <!--    </repositories>-->
+    <distributionManagement>
+        <repository>
+            <!--必须与 settings.xml 的 id 一致-->
+            <id>ezone_release_maven_maven</id>
+            <name>ezone_release_maven_maven</name>
+            <url>https://easyzone.work/pkg/ezone/maven/maven/release/</url>
+        </repository>
+        <snapshotRepository>
+            <!--必须与 settings.xml 的 id 一致-->
+            <id>ezone_snapshot_maven_maven</id>
+            <name>ezone_snapshot_maven_maven</name>
+            <url>https://easyzone.work/pkg/ezone/maven/maven/snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
