@@ -6,4 +6,4 @@ mochawesome-report/
 .vscode/
 screenshots/
 .DS_Store*
-downloads/*
+downloads/
