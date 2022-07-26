@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
+#-*-coding:GBK -*-
 # @Time    : 2022/7/26 10:37
 # @File    : sendmail.py
 import mimetypes
