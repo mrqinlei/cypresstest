@@ -11,9 +11,10 @@ from email.mime.text import MIMEText
 import time
 import zipfile
 import os
+import importlib,sys 
 
 def file_tozip():
-    reload(sys)
+    importlib.reload(sys)
     sys.setdefaultencoding( "utf-8" )
     startdir = "mochawesome-report"  # 要压缩的文件夹路径
     file_news = 'mochawesome-report.zip'  # 压缩后文件夹的名字
@@ -28,7 +29,7 @@ def file_tozip():
 
 
 def send_report():
-    reload(sys)
+    importlib.reload(sys)
     sys.setdefaultencoding( "utf-8" )
     filepath = "mochawesome-report.zip"
     smtp_server = "smtp.exmail.qq.com"
