@@ -37,9 +37,9 @@ def send_report():
     current_time = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
     msg = MIMEMultipart()
     # 邮件正文
-    msg.attach(MIMEText(u"Hi，All:"
+    msg.attach(MIMEText(u"Hi,All:"
                         "\n  test环境自动化脚本测试工具 {}已经完成测试报告见附件"
-                        "\n  目前以实现测试环境22条用例数.".format(current_time), 'plain', 'utf-8'
+                        "\n  目前以实现测试环境22条用例数.".format(current_time), 'plain'
                         "\n  账号:admin 密码:admin123123"
                         "\n  测试环境地址:http://test321.ezone-test.work/"
                         ),"utf-8")
