@@ -7,3 +7,4 @@ mochawesome-report/
 screenshots/
 .DS_Store*
 downloads/
+*.zip
