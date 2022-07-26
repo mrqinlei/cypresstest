@@ -13,6 +13,8 @@ import zipfile
 import os
 
 def file_tozip():
+    reload(sys)
+    sys.setdefaultencoding( "utf-8" )
     startdir = "mochawesome-report"  # 要压缩的文件夹路径
     file_news = 'mochawesome-report.zip'  # 压缩后文件夹的名字
     z = zipfile.ZipFile(file_news, 'w', zipfile.ZIP_DEFLATED)  # 参数一：文件夹名
@@ -26,6 +28,8 @@ def file_tozip():
 
 
 def send_report():
+    reload(sys)
+    sys.setdefaultencoding( "utf-8" )
     filepath = "mochawesome-report.zip"
     smtp_server = "smtp.exmail.qq.com"
     username = "qinlei@ezone.work"
