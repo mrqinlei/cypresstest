@@ -1,4 +1,4 @@
-FROM ezone-i.work/mirrors/cypress:latest
+FROM ezone-i.work/mirrors/cypress:9.4.1
 
 COPY ./ ./uitest
 WORKDIR /uitest
