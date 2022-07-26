@@ -22,7 +22,7 @@ def file_tozip():
         fpath = fpath and fpath + os.sep or ''  # 实现当前文件夹以及包含的所有文件的压缩
         for filename in filenames:
             z.write(os.path.join(dirpath, filename), fpath + filename)
-    print('压缩成功')
+    print(u'压缩成功')
     z.close()
 
 
@@ -37,7 +37,7 @@ def send_report():
     current_time = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
     msg = MIMEMultipart()
     # 邮件正文
-    msg.attach(MIMEText("Hi，All："
+    msg.attach(MIMEText(u"Hi，All："
                         "\n  test环境自动化脚本测试工具 {}已经完成测试报告见附件"
                         "\n  目前以实现测试环境22条用例数.".format(current_time), 'plain', 'utf-8'
                         "\n  账号：admin 密码：admin123123"
@@ -46,7 +46,7 @@ def send_report():
     msg['From'] = sender
     msg['To'] = ";".join(receivers)  # 多个收件人list转str
 
-    subject = "{}的自动化测试报告".format(current_time,"utf-8")
+    subject = "u{}的自动化测试报告".format(current_time,"utf-8")
     msg['Subject'] = subject
 
     data = open(filepath, 'rb')
@@ -65,9 +65,9 @@ def send_report():
         server.login(username, password)
         server.sendmail(sender, receivers, msg.as_string())
         server.quit()
-        print("发送成功")
+        print(u"发送成功")
     except Exception as err:
-        print("发送失败")
+        print(u"发送失败")
         print(err)
 
 
