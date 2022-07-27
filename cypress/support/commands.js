@@ -24,7 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
- Cypress.Commands.add('apilogin', (credential="amlhbmRhbmxpYW5nZGlhbjEyMzQ1Ng",
+ Cypress.Commands.add('apilogin', (credential="amlhbmRhbmxpYW5nZGlhbjEyMzQ1Ng==",
  identifier="afei") => {
     cy.request({
     url:'v1/ezbase/iam/authenticate/login',

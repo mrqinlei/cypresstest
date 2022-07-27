@@ -4,7 +4,7 @@ module.exports = defineConfig({
   viewportWidth: 1280,
   viewportHeight: 800,
   e2e: {
-    baseUrl: 'http://test321.ezone-test.work',
+    baseUrl: 'http://abc.ezone-test.work',
     setupNodeEvents(on, config) {  
     },
   "reporter": "mochawesome",
