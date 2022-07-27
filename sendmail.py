@@ -37,11 +37,17 @@ def send_report():
     current_time = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
     msg = MIMEMultipart()
     # 邮件正文
-    msg.attach(MIMEText("Hi，All:"
-                        "\n  test环境自动化脚本测试工具{0}已经完成测试报告见附件"
-                        "\n  账号:admin 密码:admin123123"
-                        "\n  目前以实现测试环境22条用例数."
-                        "\n  测试环境地址:{1}",'plain','utf-8'.format(current_time,'http://test321.ezone-test.work/')
+    # msg.attach(MIMEText("Hi，All:"
+    #                     "\n  test环境自动化脚本测试工具{}已经完成测试报告见附件"
+    #                     "\n  账号:admin 密码:admin123123"
+    #                     "\n  目前以实现测试环境22条用例数."
+    #                     "\n  测试环境地址:{}".format(current_time, 'http://test321.ezone-test.work'), 'plain', 'utf-8'
+    #                     ))
+    msg.attach(MIMEText("""
+                            <p>test环境自动化脚本执行完毕测试报告见附件,目前已实现测试环境22条用例数。</p>
+                            <p>账号:admin 密码:admin123123</p>
+                            <p><a href="http://test321.ezone-test.work">测试环境地址</a></p>
+                            """, 'html', 'utf-8'
                         ))
     msg['From'] = sender
     msg['To'] = ";".join(receivers)  # 多个收件人list转str
