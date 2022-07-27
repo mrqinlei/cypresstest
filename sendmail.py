@@ -47,6 +47,7 @@ def send_report():
                             <p>test环境自动化脚本执行完毕测试报告见附件,目前已实现测试环境22条用例数。</p>
                             <p>账号:admin 密码:admin123123</p>
                             <p><a href="http://test321.ezone-test.work">测试环境地址</a></p>
+                            <p><a href="./mochawesome-report/merge-report.html">测试报告</a></p>
                             """, 'html', 'utf-8'
                         ))
     msg['From'] = sender
