@@ -38,10 +38,10 @@ def send_report():
     msg = MIMEMultipart()
     # 邮件正文
     msg.attach(MIMEText("Hi，All:"
-                        "\n  test环境自动化脚本测试工具 {}已经完成测试报告见附件"
+                        "\n  test环境自动化脚本测试工具{0}已经完成测试报告见附件"
                         "\n  账号:admin 密码:admin123123"
                         "\n  目前以实现测试环境22条用例数."
-                        "\n  测试环境地址:{}",'plain','utf-8'.format(current_time,'http://test321.ezone-test.work/')
+                        "\n  测试环境地址:{1}",'plain','utf-8'.format(current_time,'http://test321.ezone-test.work/')
                         ))
     msg['From'] = sender
     msg['To'] = ";".join(receivers)  # 多个收件人list转str
