@@ -45,3 +45,4 @@
     expect(resp.body).to.have.property('code',0) 
 })
 })
+import 'cypress-file-upload';
