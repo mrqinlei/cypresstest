@@ -28,7 +28,7 @@ describe('ezOneUiTest', () => {
         cy.contains('使用Apache Maven构建Java项目').click()
         cy.get('#buildImageId.ant-select-selection-search-input').click()
         cy.contains('maven3.6.1-jdk-8').click()
-        cy.get('.view-lines.monaco-mouse-cursor-text').clear().type("mvn clean deploy -U")
+        cy.get('.view-lines.monaco-mouse-cursor-text').type('{del}{selectall}{backspace}').type("mvn clean deploy -U")
         cy.get('.ant-select-selection-overflow-item.ant-select-selection-overflow-item-suffix').click()
         cy.get('._searchInputOption_cohr4_237').click()
         cy.get('[placeholder="请指定要上传的文件"]').type("target/raintest01.ab-1.0.3-SNAPSHOT.jar")
@@ -53,13 +53,14 @@ describe('ezOneUiTest', () => {
 
 
     it('delete repo', () =>{
+        cy.get('._hint_xxako_87',{ timeout: 20000 }).click()
         cy.contains('代码库').click()
         cy.contains('设置').click()
         cy.contains('运维操作').click()
         cy.get('button.ant-btn.ant-btn-danger').eq(1).click()
         cy.get('[placeholder="请输入代码库名称确认"]').type('uicreatecoderepo')
         cy.get('.ant-btn.ant-btn-primary').eq(1).click()
-        cy.contains('成功删除代码库').should('contain','成功删除代码库')
+        cy.contains('成功删除代码库').should('contain','成功删除代码库')       
     }
     )
 })
