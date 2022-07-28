@@ -9,3 +9,4 @@ screenshots/
 downloads/
 *.zip
 .idea/*
+package-lock.json
