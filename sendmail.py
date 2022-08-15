@@ -30,10 +30,10 @@ def send_report():
     filepath = "mochawesome-report.zip"
     smtp_server = "smtp.exmail.qq.com"
     username = "qinlei@ezone.work"
-    password = "tx85jwSHAx7hgJa7"
+    password = "xxx"
     sender = username
     # receivers = ["xxxxxxx","xxxxxxx","xxxxxxx"]  # 接收人
-    receivers = ['373912677@qq.com']
+    receivers = ['xxx@qq.com']
     current_time = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime(time.time()))
     msg = MIMEMultipart()
     # 邮件正文
